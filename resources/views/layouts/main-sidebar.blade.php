@@ -64,3 +64,5 @@
 			</div>
 		</aside>
 <!-- main-sidebar -->
+
+#php artisan make:model invoices -mcr
