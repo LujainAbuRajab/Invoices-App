@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\InvoicesController;
+use App\Http\Controllers\SectionsController;
 
 
 /*
@@ -28,6 +29,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('invoices-list', InvoicesController::class);
 Route::resource('paid-invoices', InvoicesController::class);
+Route::resource('sections', SectionsController::class);
 
 Route::get('/{page}', 'App\Http\Controllers\AdminController@index');
 
