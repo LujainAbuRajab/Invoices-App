@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-    Invoices
+    LOLPayz - Invoices List
 @stop
 @section('css')
     <!-- Internal Data table css -->
