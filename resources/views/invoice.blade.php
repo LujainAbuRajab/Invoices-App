@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('title')
+    Invoices
+@stop
 @section('css')
 @endsection
 @section('page-header')
