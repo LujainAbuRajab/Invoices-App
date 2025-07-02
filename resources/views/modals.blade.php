@@ -69,7 +69,7 @@
 													<button class="btn ripple btn-secondary" type="button">Close</button>
 												</div>
 											</div>
-										</div>
+										</div>id="modaldemo1"
 									</div>
 								</div>
 							</div>
@@ -234,7 +234,7 @@
 		<!-- Basic modal -->
 		<div class="modal" id="modaldemo1">
 			<div class="modal-dialog" role="document">
-				<div class="modal-content modal-content-demo">
+				<div class="m	odal-content modal-content-demo">
 					<div class="modal-header">
 						<h6 class="modal-title">Basic Modal</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
 					</div>
