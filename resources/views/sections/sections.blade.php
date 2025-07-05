@@ -66,15 +66,29 @@
 						<div class="modal-dialog modal-lg" role="document">
 							<div class="modal-content modal-content-demo">
 								<div class="modal-header">
-									<h6 class="modal-title">Large Modal</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+									<h6 class="modal-title">Add Section</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
 								</div>
 								<div class="modal-body">
-									<h6>Modal Body</h6>
-									<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-								</div>
-								<div class="modal-footer">
-									<button class="btn ripple btn-primary" type="button">Save changes</button>
-									<button class="btn ripple btn-secondary" data-dismiss="modal" type="button">Close</button>
+
+									<form action="{{ route('sections.store') }}" method="post">
+							           {{ csrf_field() }}
+
+										<div class="form-group">
+											<label for="exampleInputEmail1">Section Name</label>
+											<input type="text" class="form-control" id="section_name" name="section_name">
+										</div>
+
+										<div class="form-group">
+											<label for="exampleFormControlTextarea1">Notes</label>
+											<textarea class="form-control" id="description" name="description" rows="3"></textarea>
+										</div>
+
+										<div class="modal-footer">
+											<button type="submit" class="btn btn-success">Save changes</button>
+											<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+										</div>
+									</form>
+
 								</div>
 							</div>
 						</div>

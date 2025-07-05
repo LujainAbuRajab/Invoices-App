@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\sections;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SectionsController extends Controller
 {
@@ -28,7 +29,23 @@ class SectionsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+
+        $b_exists = sections::where('section_name', $input['section_name'])->exists();
+        if ($b_exists) {
+            session()->flash('error', 'Section already exists');
+            return redirect('/sections');
+        }
+        else {
+            sections::create([
+                'section_name' => $request->section_name,
+                'description' => $request->description,
+                'created_by' => (Auth::user()->name),
+            ]);
+        
+            session()->flash('success', 'Section created successfully');
+            return redirect('/sections');
+        }
     }
 
     /**
